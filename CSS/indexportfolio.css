@@ -10,7 +10,7 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    overflow-x: hidden; /* Evita desbordamientos horizontales */
+    overflow-x: hidden; /* Evita desbordamientos horizontales  */
 }
 
 h2 {
