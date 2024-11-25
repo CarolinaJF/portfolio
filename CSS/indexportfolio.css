@@ -1,15 +1,16 @@
 /* indexportfolio.css */
 body {
     font-family: sans-serif;
-    padding: 10px;
+    padding: 0;
     margin: 0;
     background-color: #F5F5F5;
     display: flex;
-    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    justify-content: flex-start; /* Mantiene todo alineado desde el principio */
-    align-items: center; /* Centra todo en el eje horizontal */
-    min-height: 100vh; /* Establece la altura para ocupar toda la pantalla */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
     text-align: center;
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
 h2 {
@@ -17,14 +18,13 @@ h2 {
     margin-bottom: 20px;
     font-size: 48px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Asegura que el texto no se desborde */
-    white-space: nowrap; /* Evita saltos de línea */
-    border-right: 4px solid #333; /* Cursor de tipo máquina de escribir */
-    width: 0; /* Comienza con un ancho de 0 para el efecto */
-    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Animaciones de tipeo y parpadeo */
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #333;
+    width: 0;
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-/* Efecto de tipeo */
 @keyframes typing {
     from {
         width: 0;
@@ -34,22 +34,63 @@ h2 {
     }
 }
 
-/* Efecto de parpadeo del cursor */
 @keyframes blink {
     50% {
         border-color: transparent;
     }
 }
 
-.a {
-    color: #b8d5e6;
+/* Header */
+header {
+    position: fixed; /* Hace que el header quede fijo en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Hace que ocupe todo el ancho de la página */
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    z-index: 1000; /* Asegura que el header esté por encima de otros contenidos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Puedes ajustar el tamaño máximo del contenedor */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header img {
+    height: 60px; /* Ajusta el tamaño del logo */
+    margin-right: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    color: white;
     text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
-ul {
-    list-style: none;
-    padding-left: 0;
+header nav a:hover {
+    color: #FFB6B9; /* Cambia el color al pasar el ratón */
+}
+
+/* Espaciado para el contenido debajo del header */
+main {
+    padding-top: 120px; /* Da espacio debajo del header fijo */
 }
 
 /* Sección de la Galería de Proyectos */
@@ -63,8 +104,8 @@ ul {
     color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar contenido en el eje horizontal */
-    justify-content: center; /* Centrar contenido en el eje vertical */
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -77,11 +118,11 @@ ul {
     width: 100%;
     background-color: #F2E0D6;
     color: #fff;
-    text-align: center; /* Centrar todo el texto y los elementos */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar horizontalmente */
-    justify-content: center; /* Centrar verticalmente */
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -95,8 +136,8 @@ ul {
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    margin-left: auto; /* Alinea el contenedor a la izquierda */
-    margin-right: auto; /* Alinea el contenedor a la derecha */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button {
@@ -109,23 +150,11 @@ ul {
     font-size: 30px; 
     border-radius: 80px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s ease, transform 0.5s ease; /* Añadimos transición para rotación */
+    transition: background-color 0.3s ease, transform 0.5s ease;
 }
 
 .button:hover {
     background-color: #e3c27b;
-}
-
-.proyecto {
-    font-size: 24px;
-    color: #FF6347;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.proyecto:hover {
-    text-decoration: none;
-    color: #FF6347;
 }
 
 .proyectos-lista {
@@ -136,7 +165,6 @@ ul {
     margin-top: 20px;
 }
 
-/* Estilo para la sección con el formulario */
 .formulario-seccion {
     background-color: #ddab61;
     padding: 50px;
@@ -148,7 +176,6 @@ ul {
     max-width: 800px;
     margin-bottom: 20px;
     text-align: left;
-    font-family: 'Arial', sans-serif;
 }
 
 .formulario-seccion h3 {
@@ -167,7 +194,6 @@ ul {
     font-size: 18px;
     background-color: #fff;
     color: #333;
-    font-family: 'Arial', sans-serif;
 }
 
 .formulario-seccion textarea {
@@ -190,46 +216,8 @@ ul {
     background-color: #ff8800;
 }
 
-/* Aumento el margen para separar más GitHub y Proyecto 2 */
 .button-container {
-    margin-bottom: 30px; /* Mayor espacio entre los proyectos */
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-
-.left-content {
-    display: flex;
-    align-items: center;
-}
-
-.left-content img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.left-content h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-/* Enlaces de la barra de navegación */
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 16px;
-}
-
-header nav a:hover {
-    text-decoration: underline;
+    margin-bottom: 30px;
 }
 
 /* Footer */
@@ -238,7 +226,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: auto; /* Hace que el footer se desplace al final */
+    margin-top: auto;
 }
 
 footer a {
