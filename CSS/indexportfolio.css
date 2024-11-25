@@ -5,9 +5,10 @@ body {
     margin: 0;
     background-color: #F5F5F5;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: auto;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    justify-content: flex-start; /* Mantiene todo alineado desde el principio */
+    align-items: center; /* Centra todo en el eje horizontal */
+    min-height: 100vh; /* Establece la altura para ocupar toda la pantalla */
     text-align: center;
 }
 
@@ -85,8 +86,8 @@ ul {
 
 .container {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 800px;
     padding: 20px;
@@ -94,6 +95,8 @@ ul {
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    margin-left: auto; /* Alinea el contenedor a la izquierda */
+    margin-right: auto; /* Alinea el contenedor a la derecha */
 }
 
 .button {
@@ -193,16 +196,15 @@ ul {
 }
 
 /* Header */
-.header {
+header {
     display: flex;
-    justify-content: space-between; /* Alinea los elementos a los extremos */
-    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #333;
     color: white;
 }
 
-/* Contenedor a la izquierda del header */
 .left-content {
     display: flex;
     align-items: center;
@@ -236,6 +238,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    margin-top: auto; /* Hace que el footer se desplace al final */
 }
 
 footer a {
