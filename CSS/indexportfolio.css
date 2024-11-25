@@ -1,4 +1,4 @@
-/* Harry Styles */
+/* General Styles */
 body {
     font-family: sans-serif;
     padding: 0;
@@ -11,7 +11,6 @@ body {
     min-height: 100vh;
     text-align: center;
     overflow-x: hidden; /* Evita desbordamientos horizontales */
-    font-size: 16px; /* Tamaño base de fuente */
 }
 
 /* Header */
@@ -19,26 +18,28 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /* Hace que ocupe todo el ancho de la página */
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
     flex-wrap: wrap;
 }
 
 header img {
-    height: 5vw; /* Usamos vw para que el logo sea proporcional al ancho de la pantalla */
+    height: 60px;
     margin-right: 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem; /* Usamos rem para que la fuente sea proporcional al tamaño base */
+    font-size: 24px;
     display: inline-block;
     vertical-align: middle;
     color: white;
@@ -55,8 +56,8 @@ header nav {
 header nav a {
     color: white;
     text-decoration: none;
-    margin-left: 1rem;
-    font-size: 1rem; /* Usamos rem para el tamaño de fuente */
+    margin-left: 20px;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
@@ -72,7 +73,7 @@ main {
 /* Sección de la Galería de Proyectos */
 .section-1,
 .section-2 {
-    padding: 5vw;
+    padding: 50px;
     margin-bottom: 30px;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -97,7 +98,7 @@ main {
     align-items: center;
     width: 100%;
     max-width: 800px;
-    padding: 2rem;
+    padding: 20px;
     background-color: bisque;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -109,12 +110,12 @@ main {
 /* Botón */
 .button {
     display: inline-block;
-    padding: 2rem 2.5rem;
-    margin-top: 2rem;
+    padding: 20px 25px;
+    margin-top: 20px;
     background-color: #FFE156;
     color: #0da399;
     text-decoration: none;
-    font-size: 2rem; /* Usamos rem para el tamaño de fuente */
+    font-size: 30px;
     border-radius: 80px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.5s ease;
@@ -122,6 +123,28 @@ main {
 
 .button:hover {
     background-color: #e3c27b;
+}
+
+.proyectos-lista {
+    font-size: 48px;
+    color: #333333;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.formulario-seccion {
+    background-color: #ddab61;
+    padding: 50px;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: sans-serif;
 }
 
 /* Footer */
@@ -144,17 +167,16 @@ footer a:hover {
 }
 
 /* Media Queries para Pantallas Pequeñas */
-
-/* Tablets y pantallas de ancho medio (768px o menos) */
 @media (max-width: 768px) {
     header {
         padding: 10px;
-        flex-direction: column;
+        flex-direction: column; /* Organiza los elementos en columna en pantallas pequeñas */
         align-items: flex-start;
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 20px;
+        margin-top: 10px;
     }
 
     header nav {
@@ -164,66 +186,66 @@ footer a:hover {
     }
 
     header nav a {
-        margin-left: 1rem;
-        font-size: 1rem;
+        margin-left: 10px;
+        font-size: 14px;
     }
 
     .section-1,
     .section-2 {
-        padding: 4vw;
+        padding: 30px;
     }
 
     .container {
-        width: 90%;
-        padding: 1.5rem;
+        width: 100%;
+        max-width: 90%; /* Limita el ancho máximo en pantallas pequeñas */
+        padding: 15px;
     }
 
     .button {
-        font-size: 1.5rem;
-        padding: 1.5rem 2rem;
+        font-size: 24px;
+        padding: 15px 20px;
     }
 
     .formulario-seccion {
-        padding: 2rem;
+        padding: 30px;
+    }
+
+    .proyectos-lista {
+        font-size: 36px; /* Ajusta el tamaño de la lista de proyectos */
     }
 }
 
-/* Móviles pequeños (480px o menos) */
+/* Media Query para dispositivos móviles muy pequeños */
 @media (max-width: 480px) {
     header {
         padding: 5px;
     }
 
     header h1 {
-        font-size: 1.2rem;
-    }
-
-    header nav {
-        width: 100%;
-        justify-content: flex-start;
+        font-size: 18px;
     }
 
     header nav a {
-        margin-left: 0.5rem;
-        font-size: 0.9rem;
+        margin-left: 5px;
+        font-size: 12px;
     }
 
     .section-1,
     .section-2 {
-        padding: 3vw;
-    }
-
-    .container {
-        padding: 1rem;
-        width: 95%;
+        padding: 20px;
     }
 
     .button {
-        font-size: 1.2rem;
-        padding: 1.2rem 1.5rem;
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    .container {
+        padding: 10px;
+        margin-top: 15px;
     }
 
     .proyectos-lista {
-        font-size: 1.5rem;
+        font-size: 28px; /* Asegura que el tamaño de texto se ajuste */
     }
 }
