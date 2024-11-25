@@ -1,64 +1,37 @@
-/* indexportfolio.css */
-body {
+/* Asegura que la página no tenga scroll horizontal innecesario */
+html, body {
     font-family: sans-serif;
-    padding: 0;
     margin: 0;
+    padding: 0;
     background-color: #F5F5F5;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;  /* Asegura que el body ocupe toda la altura de la página */
     text-align: center;
-    overflow-x: hidden;
-}
-
-h2 {
-    color: #FFB6B9;
-    margin-bottom: 20px;
-    font-size: 48px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 4px solid #333;
-    width: 0;
-    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+    width: 100%;
+    overflow-x: hidden; /* Elimina el scroll horizontal */
 }
 
 /* Header */
 header {
-    position: fixed; /* Hace que el header quede fijo en la parte superior */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Hace que ocupe todo el ancho de la página */
+    width: 100%;
     background-color: #333;
     color: white;
     padding: 20px 0;
-    z-index: 1000; /* Asegura que el header esté por encima de otros contenidos */
+    z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 
+/* Logo y nombre de la persona */
 header img {
     height: 60px;
-    margin-right: 20px;
+    margin-right: 10px;
     vertical-align: middle;
 }
 
@@ -69,11 +42,11 @@ header h1 {
     vertical-align: middle;
 }
 
+/* Enlaces de la navegación */
 header nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-grow: 1;
 }
 
 header nav a {
@@ -91,11 +64,11 @@ header nav a:hover {
 /* Espaciado para el contenido debajo del header */
 main {
     padding-top: 120px;
-    flex-grow: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+    flex-grow: 1;
 }
 
-/* Sección de la Galería de Proyectos */
-.section-1 {
+/* Secciones */
+.section-1, .section-2 {
     padding: 50px;
     margin-bottom: 30px;
     border-radius: 8px;
@@ -108,30 +81,16 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 
-/* Sección de los Proyectos */
-.section-2 {
-    padding: 50px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    background-color: #F2E0D6;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Contenedor de proyectos */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;  /* Cambié esto a 100% para ajustarlo al ancho disponible */
     padding: 20px;
     background-color: bisque;
     border-radius: 8px;
@@ -139,33 +98,29 @@ main {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
 
+/* Botones */
 .button {
     display: inline-block;
     padding: 20px 25px;
     margin-top: 20px;
     background-color: #FFE156;
-    color: #0da399; 
-    text-decoration: none; 
-    font-size: 30px; 
-    border-radius: 80px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    color: #0da399;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.5s ease;
+    box-sizing: border-box; /* Evita desbordamientos por padding */
 }
 
 .button:hover {
     background-color: #e3c27b;
 }
 
-.proyectos-lista {
-    font-size: 48px;
-    color: #333333;
-    font-weight: bold;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
-}
-
+/* Formularios */
 .formulario-seccion {
     background-color: #ddab61;
     padding: 50px;
@@ -174,9 +129,10 @@ main {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     margin-top: 30px;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%; /* Hace que se ajuste a pantallas pequeñas */
     margin-bottom: 20px;
     text-align: left;
+    box-sizing: border-box;
 }
 
 .formulario-seccion h3 {
@@ -195,11 +151,7 @@ main {
     font-size: 18px;
     background-color: #fff;
     color: #333;
-}
-
-.formulario-seccion textarea {
-    height: 150px;
-    resize: vertical;
+    box-sizing: border-box;
 }
 
 .formulario-seccion button {
@@ -223,26 +175,18 @@ main {
 
 /* Footer */
 footer {
-    width: 100%; /* Hace que el footer ocupe todo el ancho de la página */
+    width: 100%;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto; /* Esto asegura que el footer se empuje hacia abajo */
+    margin-top: auto;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 
-footer a {
-    color: #4CAF50;
-    text-decoration: none;
-}
+/* MEDIA QUERIES */
 
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* MEDIA QUERIES - Para hacer la página responsive */
-
-/* Pantallas pequeñas, como móviles */
+/* Pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     header {
         padding: 10px;
@@ -276,7 +220,8 @@ footer a:hover {
         font-size: 36px;
     }
 
-    .formulario-seccion input, .formulario-seccion textarea {
+    .formulario-seccion input,
+    .formulario-seccion textarea {
         font-size: 16px;
         padding: 12px;
     }
@@ -291,7 +236,7 @@ footer a:hover {
     }
 }
 
-/* Pantallas muy pequeñas (como teléfonos muy pequeños) */
+/* Pantallas muy pequeñas (móviles pequeños) */
 @media (max-width: 480px) {
     header h1 {
         font-size: 18px;
@@ -311,7 +256,8 @@ footer a:hover {
         padding: 12px 15px;
     }
 
-    .formulario-seccion input, .formulario-seccion textarea {
+    .formulario-seccion input,
+    .formulario-seccion textarea {
         font-size: 14px;
         padding: 10px;
     }
