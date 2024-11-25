@@ -24,17 +24,6 @@
                 overflow: hidden;
                 white-space: nowrap;
                 border-right: 4px solid #333;
-                width: 0;
-                animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-            }
-
-            @keyframes typing {
-                from { width: 0; }
-                to { width: 100%; }
-            }
-
-            @keyframes blink {
-                50% { border-color: transparent; }
             }
 
             .container {
@@ -54,7 +43,7 @@
                 animation: muñeca-saludo 2s ease-in-out infinite;
             }
 
-            @keyframes muneca-saludo {
+            @keyframes muñeca-saludo {
                 0% { transform: translateY(0); }
                 50% { transform: translateY(-10px); }
                 100% { transform: translateY(0); }
@@ -86,12 +75,12 @@
     </head>
     <body>
         <div class="container">
-            <h2 id="saludo-titulo">¡Hola!</h2>
+            <h2 id="saludo-titulo">¡Hola!</h2> <!-- El título estará vacío al principio -->
 
             <!-- Imagen de muñeca con ordenador -->
-            <img src="muneca.png" alt="Muneca con PC" class="muneca">
+            <img src="Imagenes/muneca.png" alt="Muñeca con Computadora" class="muñeca">
 
-            <p class="bienvenida">Soy Carolina y me encanta programar</p>
+            <p class="bienvenida">¡Hola! Soy Carolina y me encanta programar</p>
 
             <a href="#" class="button">¿Quieres saber más sobre mis proyectos?</a>
         </div>
@@ -102,6 +91,9 @@
                 let i = 0;
                 const element = document.getElementById(elementId);
 
+                // Limpiar el contenido previo (si lo hubiera) para evitar repeticiones
+                element.innerHTML = '';
+
                 function type() {
                     if (i < text.length) {
                         element.innerHTML += text.charAt(i);
@@ -110,10 +102,10 @@
                     }
                 }
 
-                type(); // Inicia el tipo de efecto
+                type(); // Inicia el efecto de tipeo
             }
 
-            // Llamar a la función typingEffect para el saludo
+            // Llamar a la función typingEffect para el saludo cuando la página se cargue
             window.onload = function() {
                 typingEffect("saludo-titulo", "¡Bienvenida a mi página!", 100);
             };
