@@ -8,9 +8,9 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;  /* Asegura que el body ocupe toda la altura de la página */
+    min-height: 100vh;
     text-align: center;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
 h2 {
@@ -45,37 +45,31 @@ header {
     position: fixed; /* Hace que el header quede fijo en la parte superior */
     top: 0;
     left: 0;
-    width: 99%; /* Hace que ocupe todo el ancho de la página */
+    width: 100%; /* Hace que ocupe todo el ancho de la página */
     background-color: #333;
     color: white;
     padding: 20px 0;
     z-index: 1000; /* Asegura que el header esté por encima de otros contenidos */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
 }
 
 header img {
-    height: 60px;
+    height: 60px; /* Ajusta el tamaño del logo */
     margin-right: 20px;
-    vertical-align: middle;
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block; /* Asegura que el h1 esté junto al logo */
+    vertical-align: middle; /* Alinea el texto del h1 verticalmente */
 }
 
 header nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Coloca los enlaces al final de la barra */
     align-items: center;
+    flex-grow: 1; /* Hace que los enlaces se expandan para ocupar el espacio disponible */
 }
 
 header nav a {
@@ -87,13 +81,12 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #FFB6B9;
+    color: #FFB6B9; /* Cambia el color al pasar el ratón */
 }
 
 /* Espaciado para el contenido debajo del header */
 main {
-    padding-top: 120px;
-    flex-grow: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+    padding-top: 120px; /* Da espacio debajo del header fijo */
 }
 
 /* Sección de la Galería de Proyectos */
@@ -225,12 +218,12 @@ main {
 
 /* Footer */
 footer {
-    width: 100%; /* Hace que el footer ocupe todo el ancho de la página */
+    width: 100%;
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: auto; /* Esto asegura que el footer se empuje hacia abajo */
+    padding: 10px;
+    margin-top: auto;
 }
 
 footer a {
@@ -240,90 +233,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* MEDIA QUERIES - Para hacer la página responsive */
-
-/* Pantallas pequeñas, como móviles */
-@media (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 20px;
-    }
-
-    header nav a {
-        font-size: 14px;
-        margin-left: 15px;
-    }
-
-    .section-1, .section-2 {
-        padding: 30px;
-    }
-
-    .container {
-        padding: 15px;
-        margin-top: 10px;
-        max-width: 100%;
-    }
-
-    .button {
-        font-size: 24px;
-        padding: 15px 20px;
-    }
-
-    .proyectos-lista {
-        font-size: 36px;
-    }
-
-    .formulario-seccion input, .formulario-seccion textarea {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    .formulario-seccion button {
-        font-size: 18px;
-        padding: 12px 25px;
-    }
-
-    footer {
-        padding: 15px 0;
-    }
-}
-
-/* Pantallas muy pequeñas (como teléfonos muy pequeños) */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 18px;
-    }
-
-    header nav a {
-        font-size: 12px;
-        margin-left: 10px;
-    }
-
-    .section-1, .section-2 {
-        padding: 20px;
-    }
-
-    .button {
-        font-size: 20px;
-        padding: 12px 15px;
-    }
-
-    .formulario-seccion input, .formulario-seccion textarea {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .formulario-seccion button {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    footer {
-        padding: 10px 0;
-    }
 }
