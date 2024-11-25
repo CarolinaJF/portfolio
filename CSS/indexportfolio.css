@@ -1,5 +1,5 @@
 /* Asegura que la página no tenga scroll horizontal innecesario */
-html, body {
+body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -151,6 +151,7 @@ main {
     font-size: 18px;
     background-color: #fff;
     color: #333;
+    font-family: 'Arial', sans-serif;
     box-sizing: border-box;
 }
 
