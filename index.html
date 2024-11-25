@@ -36,19 +36,6 @@
                 text-align: center;
             }
 
-            .muñeca {
-                width: 200px;
-                height: auto;
-                margin-top: 20px;
-                animation: muñeca-saludo 2s ease-in-out infinite;
-            }
-
-            @keyframes muñeca-saludo {
-                0% { transform: translateY(0); }
-                50% { transform: translateY(-10px); }
-                100% { transform: translateY(0); }
-            }
-
             .bienvenida {
                 color: #FF6347;
                 font-size: 24px;
@@ -77,12 +64,10 @@
         <div class="container">
             <h2 id="saludo-titulo">¡Hola!</h2> <!-- El título estará vacío al principio -->
 
-            <!-- Imagen de muñeca con ordenador -->
-            <img src="Imagenes/muneca.png" alt="Muñeca con Computadora" class="muñeca">
+            <p class="bienvenida">Soy Carolina y me encanta programar</p>
 
-            <p class="bienvenida">¡Hola! Soy Carolina y me encanta programar</p>
-
-            <a href="#" class="button">¿Quieres saber más sobre mis proyectos?</a>
+            <!-- El enlace ahora redirige a indexportfolio.html -->
+            <a href="HTML/indexportfolio.html" class="button">¿Quieres saber más sobre mis proyectos?</a>
         </div>
 
         <script>
@@ -107,7 +92,7 @@
 
             // Llamar a la función typingEffect para el saludo cuando la página se cargue
             window.onload = function() {
-                typingEffect("saludo-titulo", "¡Bienvenida a mi página!", 100);
+                typingEffect("saludo-titulo", "¡Hola!", 100);
             };
         </script>
     </body>
