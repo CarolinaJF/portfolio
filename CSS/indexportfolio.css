@@ -8,9 +8,9 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh;  /* Asegura que el body ocupe toda la altura de la página */
     text-align: center;
-    overflow-x: hidden; /* Evita desbordamientos horizontales */
+    overflow-x: hidden;
 }
 
 h2 {
@@ -54,22 +54,23 @@ header {
 }
 
 header img {
-    height: 60px; /* Ajusta el tamaño del logo */
+    height: 60px;
     margin-right: 20px;
+    vertical-align: middle;
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
-    display: inline-block; /* Asegura que el h1 esté junto al logo */
-    vertical-align: middle; /* Alinea el texto del h1 verticalmente */
+    display: inline-block;
+    vertical-align: middle;
 }
 
 header nav {
     display: flex;
-    justify-content: flex-end; /* Coloca los enlaces al final de la barra */
+    justify-content: flex-end;
     align-items: center;
-    flex-grow: 1; /* Hace que los enlaces se expandan para ocupar el espacio disponible */
+    flex-grow: 1;
 }
 
 header nav a {
@@ -81,12 +82,13 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #FFB6B9; /* Cambia el color al pasar el ratón */
+    color: #FFB6B9;
 }
 
 /* Espaciado para el contenido debajo del header */
 main {
-    padding-top: 120px; /* Da espacio debajo del header fijo */
+    padding-top: 120px;
+    flex-grow: 1; /* Hace que el contenido principal ocupe el espacio disponible */
 }
 
 /* Sección de la Galería de Proyectos */
@@ -218,12 +220,12 @@ main {
 
 /* Footer */
 footer {
-    width: 100%;
+    width: 100%; /* Hace que el footer ocupe todo el ancho de la página */
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: auto;
+    padding: 20px 0;
+    margin-top: auto; /* Esto asegura que el footer se empuje hacia abajo */
 }
 
 footer a {
