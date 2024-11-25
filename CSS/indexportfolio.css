@@ -172,6 +172,7 @@ main {
     max-width: 800px;
     margin-bottom: 20px;
     text-align: left;
+    font-family: sans-serif; /* Cambiado aquí para que coincida con el body */
 }
 
 .formulario-seccion h3 {
@@ -190,7 +191,7 @@ main {
     font-size: 18px;
     background-color: #fff;
     color: #333;
-    font-family: 'Arial', sans-serif;
+    font-family: sans-serif; /* Cambiado aquí también */
 }
 
 .formulario-seccion textarea {
