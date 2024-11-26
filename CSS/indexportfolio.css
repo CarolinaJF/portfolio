@@ -1,4 +1,4 @@
-/* General body settings */
+/* Cuerpo del sitio, aplicar el mismo tamaño de fuente en todo el contenido */
 body {
     font-family: sans-serif;
     padding: 0;
@@ -11,13 +11,14 @@ body {
     min-height: 100vh;
     text-align: center;
     overflow-x: hidden; /* Evita desbordamientos horizontales */
+    font-size: 2vw; /* Ajuste del tamaño de la fuente global */
 }
 
-/* Título de h2 ajustado con clamp para evitar que sea demasiado grande */
+/* Título de h2 ajustado con el mismo tamaño de fuente */
 h2 {
     color: #FFB6B9;
-    margin-bottom: 2%; /* 20px => 2% aprox. */
-    font-size: clamp(24px, 6vw, 60px); /* Ajuste dinámico entre 24px y 60px */
+    margin-bottom: 2%;
+    font-size: 2vw; /* Igual al tamaño global */
     text-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
     overflow: hidden;
     white-space: nowrap;
@@ -26,139 +27,34 @@ h2 {
     animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-/* Header */
-header {
-    position: fixed; /* Fija el header en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 2% 0;
-    z-index: 1000;
-    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
-    flex-wrap: wrap;
-}
-
-header img {
-    height: clamp(30px, 6vw, 50px); /* Ajusta el tamaño del logo */
-    margin-right: 2%;
-}
-
+/* Título h1 en el header */
 header h1 {
     margin: 0;
-    font-size: clamp(20px, 4vw, 40px); /* Ajuste dinámico del tamaño del título */
+    font-size: 2vw; /* Iguala el tamaño de fuente */
     display: inline-block;
     vertical-align: middle;
     color: white;
 }
 
-/* Navegación */
-header nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-grow: 1;
-    flex-wrap: wrap;
-}
-
+/* Enlaces del header */
 header nav a {
     color: white;
     text-decoration: none;
     margin-left: 2%;
-    font-size: clamp(14px, 2vw, 24px); /* Ajuste dinámico de tamaño de los enlaces */
+    font-size: 2vw; /* Igual al tamaño global */
     transition: color 0.3s ease;
-}
-
-header nav a:hover {
-    color: #FFB6B9;
-}
-
-/* Espaciado para el contenido debajo del header */
-main {
-    padding-top: 12%; /* Espacio debajo del header */
-}
-
-/* Sección de Galería de Proyectos */
-.section-1, .section-2 {
-    padding: 5%;
-    margin-bottom: 3%;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    width: 99%;
-    background-color: #A9D9D0; /* Color de fondo de la sección */
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Contenedor general */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 99%;
-    max-width: 80%; /* Limita el ancho máximo */
-    padding: 5%;
-    background-color: bisque;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Botón */
-.button {
-    display: inline-block;
-    padding: 5% 6%;
-    margin-top: 2%;
-    background-color: #FFE156;
-    color: #0da399;
-    text-decoration: none;
-    font-size: clamp(20px, 4vw, 40px); /* Ajuste dinámico del tamaño del botón */
-    border-radius: 80px;
-    box-shadow: 0 0.4vw 0.6vw rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.5s ease;
-}
-
-.button:hover {
-    background-color: #e3c27b;
 }
 
 /* Lista de proyectos */
 .proyectos-lista {
-    font-size: clamp(30px, 6vw, 48px); /* Ajuste dinámico del tamaño de la lista */
+    font-size: 2vw; /* Igual al tamaño global */
     color: #333333;
     font-weight: bold;
     text-shadow: 0.3vw 0.3vw 0.8vw rgba(0, 0, 0, 0.3);
     margin-top: 2%;
 }
 
-/* Formulario */
+/* Formulario - Cuerpo y tamaño de fuente consistente */
 .formulario-seccion {
     background-color: #ddab61;
     padding: 5%;
@@ -167,17 +63,13 @@ main {
     box-shadow: 0 0 2vw rgba(0, 0, 0, 0.2);
     margin-top: 3%;
     width: 100%;
-    max-width: 80%; /* Limita el ancho máximo del formulario */
+    max-width: 80%;
     margin-bottom: 2%;
     text-align: left;
+    font-size: 2vw; /* Tamaño consistente para todo el texto del formulario */
 }
 
-.formulario-seccion h3 {
-    font-size: clamp(28px, 4.5vw, 36px); /* Ajuste dinámico del tamaño del título del formulario */
-    color: #FF6347;
-    margin-bottom: 3%;
-}
-
+/* Ajuste del tamaño de los campos de entrada y textarea */
 .formulario-seccion input,
 .formulario-seccion textarea {
     width: 100%;
@@ -185,21 +77,17 @@ main {
     margin-bottom: 3%;
     border-radius: 8px;
     border: 1px solid #ddd;
-    font-size: 2vw;
+    font-size: 2vw; /* Igual al tamaño global */
     background-color: #fff;
     color: #333;
     font-family: sans-serif;
 }
 
-.formulario-seccion textarea {
-    height: 20vw;
-    resize: vertical;
-}
-
+/* Ajustes de botón con tamaño de fuente consistente */
 .formulario-seccion button {
     background-color: #f97861;
     color: white;
-    font-size: 2.5vw;
+    font-size: 2vw; /* Igual al tamaño global */
     padding: 3.5% 7%;
     border: none;
     border-radius: 50px;
@@ -211,7 +99,7 @@ main {
     background-color: #ff8800;
 }
 
-/* Footer */
+/* Otros elementos que puedes ajustar */
 footer {
     width: 100%;
     background-color: #333;
@@ -224,6 +112,7 @@ footer {
 footer a {
     color: #4CAF50;
     text-decoration: none;
+    font-size: 2vw; /* Igual al tamaño global */
 }
 
 footer a:hover {
