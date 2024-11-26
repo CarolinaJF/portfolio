@@ -1,4 +1,4 @@
-/* Configuración general del cuerpo */
+/* General body settings */
 body {
     font-family: sans-serif;
     padding: 0;
@@ -11,14 +11,13 @@ body {
     min-height: 100vh;
     text-align: center;
     overflow-x: hidden; /* Evita desbordamientos horizontales */
-    font-size: 2vw; /* Establece un tamaño de fuente global */
 }
 
 /* Título de h2 ajustado con clamp para evitar que sea demasiado grande */
 h2 {
     color: #FFB6B9;
     margin-bottom: 2%; /* 20px => 2% aprox. */
-    font-size: 2vw; /* Aplica el tamaño de fuente global */
+    font-size: clamp(24px, 6vw, 60px); /* Ajuste dinámico entre 24px y 60px */
     text-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
     overflow: hidden;
     white-space: nowrap;
@@ -27,7 +26,6 @@ h2 {
     animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-/* Animación del typing y el parpadeo */
 @keyframes typing {
     from {
         width: 0;
@@ -63,13 +61,13 @@ header {
 }
 
 header img {
-    height: 2vw; /* Ajusta el tamaño del logo */
+    height: clamp(30px, 6vw, 50px); /* Ajusta el tamaño del logo */
     margin-right: 2%;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2vw; /* Aplica el tamaño de fuente global */
+    font-size: clamp(20px, 4vw, 40px); /* Ajuste dinámico del tamaño del título */
     display: inline-block;
     vertical-align: middle;
     color: white;
@@ -88,7 +86,7 @@ header nav a {
     color: white;
     text-decoration: none;
     margin-left: 2%;
-    font-size: 2vw; /* Aplica el tamaño de fuente global */
+    font-size: clamp(14px, 2vw, 24px); /* Ajuste dinámico de tamaño de los enlaces */
     transition: color 0.3s ease;
 }
 
@@ -141,7 +139,7 @@ main {
     background-color: #FFE156;
     color: #0da399;
     text-decoration: none;
-    font-size: 2vw; /* Aplica el tamaño de fuente global */
+    font-size: clamp(20px, 4vw, 40px); /* Ajuste dinámico del tamaño del botón */
     border-radius: 80px;
     box-shadow: 0 0.4vw 0.6vw rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.5s ease;
@@ -153,7 +151,7 @@ main {
 
 /* Lista de proyectos */
 .proyectos-lista {
-    font-size: 2vw; /* Aplica el tamaño de fuente global */
+    font-size: clamp(30px, 6vw, 48px); /* Ajuste dinámico del tamaño de la lista */
     color: #333333;
     font-weight: bold;
     text-shadow: 0.3vw 0.3vw 0.8vw rgba(0, 0, 0, 0.3);
@@ -175,7 +173,7 @@ main {
 }
 
 .formulario-seccion h3 {
-    font-size: 2vw; /* Aplica el tamaño de fuente global */
+    font-size: clamp(28px, 4.5vw, 36px); /* Ajuste dinámico del tamaño del título del formulario */
     color: #FF6347;
     margin-bottom: 3%;
 }
@@ -187,7 +185,7 @@ main {
     margin-bottom: 3%;
     border-radius: 8px;
     border: 1px solid #ddd;
-    font-size: 2vw; /* Aplica el tamaño de fuente global */
+    font-size: 2vw;
     background-color: #fff;
     color: #333;
     font-family: sans-serif;
@@ -201,7 +199,7 @@ main {
 .formulario-seccion button {
     background-color: #f97861;
     color: white;
-    font-size: 2vw; /* Aplica el tamaño de fuente global */
+    font-size: 2.5vw;
     padding: 3.5% 7%;
     border: none;
     border-radius: 50px;
@@ -226,7 +224,6 @@ footer {
 footer a {
     color: #4CAF50;
     text-decoration: none;
-    font-size: 2vw; /* Aplica el tamaño de fuente global */
 }
 
 footer a:hover {
