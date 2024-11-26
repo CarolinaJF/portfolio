@@ -95,15 +95,15 @@ header nav a:hover {
 
 /* Espaciado para el contenido debajo del header */
 main {
-    padding-top: 120px; /* Da espacio debajo del header fijo */
+    padding-top: 15%; /* Da espacio debajo del header fijo */
 }
 
 /* Sección de la Galería de Proyectos */
 .section-1 {
-    padding: 50px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: 6%; 
+    margin-bottom: 4%; 
+    border-radius: 1%;
+    box-shadow: 0 0 1% rgba(0, 0, 0, 0.1);
     width: 99%;
     background-color: #A9D9D0;
     color: #fff;
@@ -116,10 +116,10 @@ main {
 
 /* Sección de los Proyectos */
 .section-2 {
-    padding: 50px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: 6%; /* 50px convertido a un porcentaje relativo */
+    margin-bottom: 2%; /* 20px convertido a un porcentaje relativo */
+    border-radius: 1%; /* 8px convertido a un porcentaje relativo */
+    box-shadow: 0 0 1% rgba(0, 0, 0, 0.1); /* 8px convertido a porcentaje */
     width: 99%;
     background-color: #F2E0D6;
     color: #fff;
