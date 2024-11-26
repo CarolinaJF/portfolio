@@ -1,4 +1,4 @@
-/* indexportfolio.css */
+/* Cuerpo del sitio, aplicar el mismo tamaño de fuente en todo el contenido */
 body {
     font-family: sans-serif;
     padding: 0;
@@ -10,209 +10,85 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    overflow-x: hidden; /* Evita desbordamientos horizontales  */
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
+    font-size: 2vw; /* Ajuste del tamaño de la fuente global */
 }
 
+/* Título de h2 ajustado con el mismo tamaño de fuente */
 h2 {
     color: #FFB6B9;
-    margin-bottom: 5%; 
-    font-size: 6%; 
-    text-shadow: 2% 2% 5% rgba(0, 0, 0, 0.3); 
+    margin-bottom: 2%;
+    font-size: 2vw; /* Igual al tamaño global */
+    text-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
     overflow: hidden;
     white-space: nowrap;
-    border-right: 1% solid #333;
+    border-right: 0.4vw solid #333;
     width: 0;
     animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-/* Header */
-
-header {
-    position: fixed; /* Hace que el header quede fijo en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%; /* Hace que ocupe todo el ancho de la página */
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    z-index: 1000; /* Asegura que el header esté por encima de otros contenidos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex; /* Cambiar a flexbox */
-    justify-content: space-between; /* Distribuir el contenido a los lados */
-    align-items: center; /* Alineación vertical */
-    padding-left: 20px; /* Para que el logo no toque el borde */
-    padding-right: 20px; /* Para los márgenes a la derecha */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
-}
-
-header img {
-    height: 60px; /* Ajusta el tamaño del logo */
-    margin-right: 20px; /* Espacio entre logo y texto */
-}
-
+/* Título h1 en el header */
 header h1 {
     margin: 0;
-    font-size: 24px;
-    display: inline-block; /* Asegura que el h1 esté junto al logo */
-    vertical-align: middle; /* Alinea el texto del h1 verticalmente */
-    color: white; /* Asegura que el nombre también sea blanco */
+    font-size: 2vw; /* Iguala el tamaño de fuente */
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
 }
 
-header nav {
-    display: flex;
-    justify-content: flex-end; /* Coloca los enlaces al final de la barra */
-    align-items: center;
-    flex-grow: 1; /* Hace que los enlaces se expandan para ocupar el espacio disponible */
-    flex-wrap: wrap; /* Permite que los enlaces se acomoden bien si hay desbordamiento */
-}
-
+/* Enlaces del header */
 header nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 16px;
+    margin-left: 2%;
+    font-size: 2vw; /* Igual al tamaño global */
     transition: color 0.3s ease;
 }
 
-header nav a:hover {
-    color: #FFB6B9; /* Cambia el color al pasar el ratón */
-}
-
-/* Espaciado para el contenido debajo del header */
-main {
-    padding-top: 120px; /* Da espacio debajo del header fijo */
-}
-
-/* Sección de la Galería de Proyectos */
-.section-1 {
-    padding: 50px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    width: 99%;
-    background-color: #A9D9D0;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Sección de los Proyectos */
-.section-2 {
-    padding: 50px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    width: 99%;
-    background-color: #F2E0D6;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 99%;
-    max-width: 800px;
-    padding: 20px;
-    background-color: bisque;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.button {
-    display: inline-block;
-    padding: 20px 25px;
-    margin-top: 20px;
-    background-color: #FFE156;
-    color: #0da399; 
-    text-decoration: none; 
-    font-size: 30px; 
-    border-radius: 80px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s ease, transform 0.5s ease;
-}
-
-.button:hover {
-    background-color: #e3c27b;
-}
-
+/* Lista de proyectos */
 .proyectos-lista {
-    font-size: 48px;
+    font-size: 2vw; /* Igual al tamaño global */
     color: #333333;
     font-weight: bold;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
+    text-shadow: 0.3vw 0.3vw 0.8vw rgba(0, 0, 0, 0.3);
+    margin-top: 2%;
 }
 
+/* Formulario - Cuerpo y tamaño de fuente consistente */
 .formulario-seccion {
     background-color: #ddab61;
-    padding: 50px;
+    padding: 5%;
     color: #333;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 30px;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.2);
+    margin-top: 3%;
     width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
+    max-width: 80%;
+    margin-bottom: 2%;
     text-align: left;
-    font-family: sans-serif;
+    font-size: 2vw; /* Tamaño consistente para todo el texto del formulario */
 }
 
-.formulario-seccion h3 {
-    font-size: 36px;
-    color: #FF6347;
-    margin-bottom: 30px;
-}
-
+/* Ajuste del tamaño de los campos de entrada y textarea */
 .formulario-seccion input,
 .formulario-seccion textarea {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 3.5%;
+    margin-bottom: 3%;
     border-radius: 8px;
     border: 1px solid #ddd;
-    font-size: 18px;
+    font-size: 2vw; /* Igual al tamaño global */
     background-color: #fff;
     color: #333;
     font-family: sans-serif;
 }
 
-.formulario-seccion textarea {
-    height: 150px;
-    resize: vertical;
-}
-
+/* Ajustes de botón con tamaño de fuente consistente */
 .formulario-seccion button {
     background-color: #f97861;
     color: white;
-    font-size: 20px;
-    padding: 15px 30px;
+    font-size: 2vw; /* Igual al tamaño global */
+    padding: 3.5% 7%;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -223,23 +99,20 @@ main {
     background-color: #ff8800;
 }
 
-.button-container {
-    margin-bottom: 30px;
-}
-
-/* Footer */
+/* Otros elementos que puedes ajustar */
 footer {
     width: 100%;
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 1%;
     margin-top: auto;
 }
 
 footer a {
     color: #4CAF50;
     text-decoration: none;
+    font-size: 2vw; /* Igual al tamaño global */
 }
 
 footer a:hover {
