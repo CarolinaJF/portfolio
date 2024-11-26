@@ -135,12 +135,12 @@ main {
     flex-direction: column;
     align-items: center;
     width: 99%;
-    max-width: 800px;
-    padding: 20px;
+    max-width: 90%; /* 800px convertido a un porcentaje relativo */
+    padding: 2%; /* 20px convertido a un porcentaje relativo */
     background-color: bisque;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    border-radius: 1%; /* 8px convertido a un porcentaje relativo */
+    box-shadow: 0 0 2% rgba(0, 0, 0, 0.1); /* 15px convertido a porcentaje */
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
 }
