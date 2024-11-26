@@ -15,12 +15,12 @@ body {
 
 h2 {
     color: #FFB6B9;
-    margin-bottom: 5%; /* Aproximadamente 20px, convertido a porcentaje */
-    font-size: 10vw; /* Usando viewport width para hacer el texto responsivo */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2%; /* 20px => 2% aprox. */
+    font-size: 6vw; /* Cambiado a relativo a la pantalla */
+    text-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
     overflow: hidden;
     white-space: nowrap;
-    border-right: 0.5vw solid #333; /* Aproximadamente 4px convertido a vw */
+    border-right: 0.4vw solid #333;
     width: 0;
     animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
@@ -43,68 +43,68 @@ h2 {
 /* Header */
 
 header {
-    position: fixed;
+    position: fixed; /* Hace que el header quede fijo en la parte superior */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /* Hace que ocupe todo el ancho de la página */
     background-color: #333;
     color: white;
-    padding: 5% 0; /* Convertido a porcentaje */
-    z-index: 1000;
-    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.2); /* Convertido a porcentaje */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 5%; /* Convertido a porcentaje */
-    padding-right: 5%; /* Convertido a porcentaje */
-    flex-wrap: wrap;
+    padding: 2% 0; /* 20px => 2% */
+    z-index: 1000; /* Asegura que el header esté por encima de otros contenidos */
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+    display: flex; /* Cambiar a flexbox */
+    justify-content: space-between; /* Distribuir el contenido a los lados */
+    align-items: center; /* Alineación vertical */
+    padding-left: 2%; /* Para que el logo no toque el borde */
+    padding-right: 2%; /* Para los márgenes a la derecha */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
 }
 
 header img {
-    height: 10vh; /* Convertido a vh (viewport height) */
-    margin-right: 2%; /* Convertido a porcentaje */
+    height: 6vw; /* Ajusta el tamaño del logo a un porcentaje */
+    margin-right: 2%; /* Espacio entre logo y texto */
 }
 
 header h1 {
     margin: 0;
-    font-size: 5vw; /* Aproximadamente 24px convertido a vw */
-    display: inline-block;
-    vertical-align: middle;
-    color: white;
+    font-size: 4vw; /* 24px => 4% aprox. */
+    display: inline-block; /* Asegura que el h1 esté junto al logo */
+    vertical-align: middle; /* Alinea el texto del h1 verticalmente */
+    color: white; /* Asegura que el nombre también sea blanco */
 }
 
 header nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Coloca los enlaces al final de la barra */
     align-items: center;
-    flex-grow: 1;
-    flex-wrap: wrap;
+    flex-grow: 1; /* Hace que los enlaces se expandan para ocupar el espacio disponible */
+    flex-wrap: wrap; /* Permite que los enlaces se acomoden bien si hay desbordamiento */
 }
 
 header nav a {
     color: white;
     text-decoration: none;
-    margin-left: 5%; /* Convertido a porcentaje */
-    font-size: 4vw; /* Aproximadamente 16px convertido a vw */
+    margin-left: 2%; /* Espacio entre enlaces */
+    font-size: 2vw; /* 16px => 2% aprox. */
     transition: color 0.3s ease;
 }
 
 header nav a:hover {
-    color: #FFB6B9;
+    color: #FFB6B9; /* Cambia el color al pasar el ratón */
 }
 
 /* Espaciado para el contenido debajo del header */
 main {
-    padding-top: 15vh; /* Aproximadamente 120px convertido a vh */
+    padding-top: 12%; /* 120px => 12% aprox. */
 }
 
 /* Sección de la Galería de Proyectos */
 .section-1 {
-    padding: 8%; /* Convertido a porcentaje */
-    margin-bottom: 5%; /* Convertido a porcentaje */
-    border-radius: 1%;
-    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); /* Convertido a porcentaje */
-    width: 95%; /* Convertido a porcentaje */
+    padding: 5%; /* 50px => 5% */
+    margin-bottom: 3%; /* 30px => 3% */
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    width: 99%;
     background-color: #A9D9D0;
     color: #fff;
     display: flex;
@@ -116,11 +116,11 @@ main {
 
 /* Sección de los Proyectos */
 .section-2 {
-    padding: 8%; /* Convertido a porcentaje */
-    margin-bottom: 4%; /* Convertido a porcentaje */
-    border-radius: 1%;
-    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); /* Convertido a porcentaje */
-    width: 95%; /* Convertido a porcentaje */
+    padding: 5%; /* 50px => 5% */
+    margin-bottom: 2%; /* 20px => 2% */
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    width: 99%;
     background-color: #F2E0D6;
     color: #fff;
     text-align: center;
@@ -134,27 +134,27 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%; /* Convertido a porcentaje */
-    max-width: 80vw; /* Convertido a viewport width */
-    padding: 5%; /* Convertido a porcentaje */
+    width: 99%;
+    max-width: 80%; /* 800px => 80% aprox. */
+    padding: 5%; /* 20px => 5% */
     background-color: bisque;
-    border-radius: 1%;
-    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); /* Convertido a porcentaje */
-    margin-top: 5%; /* Convertido a porcentaje */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 2%; /* 20px => 2% */
     margin-left: auto;
     margin-right: auto;
 }
 
 .button {
     display: inline-block;
-    padding: 5% 6%; /* Convertido a porcentaje */
-    margin-top: 5%; /* Convertido a porcentaje */
+    padding: 5% 6%; /* 20px 25px => 5% 6% */
+    margin-top: 2%; /* 20px => 2% */
     background-color: #FFE156;
-    color: #0da399;
-    text-decoration: none;
-    font-size: 6vw; /* Aproximadamente 30px convertido a vw */
-    border-radius: 80px;
-    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); /* Convertido a porcentaje */
+    color: #0da399; 
+    text-decoration: none; 
+    font-size: 4vw; /* 30px => 4% aprox. */
+    border-radius: 80px; 
+    box-shadow: 0 0.4vw 0.6vw rgba(0, 0, 0, 0.1); 
     transition: background-color 0.3s ease, transform 0.5s ease;
 }
 
@@ -163,56 +163,56 @@ main {
 }
 
 .proyectos-lista {
-    font-size: 10vw; /* Aproximadamente 48px convertido a vw */
+    font-size: 6vw; /* 48px => 6% */
     color: #333333;
     font-weight: bold;
-    text-shadow: 3% 3% 8% rgba(0, 0, 0, 0.3);
-    margin-top: 5%; /* Convertido a porcentaje */
+    text-shadow: 0.3vw 0.3vw 0.8vw rgba(0, 0, 0, 0.3);
+    margin-top: 2%; /* 20px => 2% */
 }
 
 .formulario-seccion {
     background-color: #ddab61;
-    padding: 8%; /* Convertido a porcentaje */
+    padding: 5%; /* 50px => 5% */
     color: #333;
-    border-radius: 1%;
-    box-shadow: 0 0.5% 2% rgba(0, 0, 0, 0.2); /* Convertido a porcentaje */
-    margin-top: 5%; /* Convertido a porcentaje */
-    width: 95%; /* Convertido a porcentaje */
-    max-width: 80vw; /* Convertido a viewport width */
-    margin-bottom: 5%; /* Convertido a porcentaje */
+    border-radius: 12px;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.2); /* 20px => 2vw */
+    margin-top: 3%; /* 30px => 3% */
+    width: 100%;
+    max-width: 80%; /* 800px => 80% */
+    margin-bottom: 2%; /* 20px => 2% */
     text-align: left;
     font-family: sans-serif;
 }
 
 .formulario-seccion h3 {
-    font-size: 8vw; /* Aproximadamente 36px convertido a vw */
+    font-size: 4.5vw; /* 36px => 4.5% */
     color: #FF6347;
-    margin-bottom: 5%; /* Convertido a porcentaje */
+    margin-bottom: 3%; /* 30px => 3% */
 }
 
 .formulario-seccion input,
 .formulario-seccion textarea {
     width: 100%;
-    padding: 4%; /* Convertido a porcentaje */
-    margin-bottom: 4%; /* Convertido a porcentaje */
-    border-radius: 1%;
-    border: 0.5% solid #ddd; /* Convertido a porcentaje */
-    font-size: 4vw; /* Aproximadamente 18px convertido a vw */
+    padding: 3.5%; /* 15px => 3.5% */
+    margin-bottom: 3%; /* 15px => 3% */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 2vw; /* 18px => 2% */
     background-color: #fff;
     color: #333;
     font-family: sans-serif;
 }
 
 .formulario-seccion textarea {
-    height: 20vh; /* Convertido a vh */
+    height: 20vw; /* 150px => 20% */
     resize: vertical;
 }
 
 .formulario-seccion button {
     background-color: #f97861;
     color: white;
-    font-size: 5vw; /* Aproximadamente 20px convertido a vw */
-    padding: 4% 8%; /* Convertido a porcentaje */
+    font-size: 2.5vw; /* 20px => 2.5% */
+    padding: 3.5% 7%; /* 15px 30px => 3.5% 7% */
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -224,7 +224,7 @@ main {
 }
 
 .button-container {
-    margin-bottom: 5%; /* Convertido a porcentaje */
+    margin-bottom: 3%; /* 30px => 3% */
 }
 
 /* Footer */
@@ -233,7 +233,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 2%; /* Convertido a porcentaje */
+    padding: 1%; /* 10px => 1% */
     margin-top: auto;
 }
 
