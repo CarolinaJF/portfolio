@@ -15,12 +15,12 @@ body {
 
 h2 {
     color: #FFB6B9;
-    margin-bottom: 5%;
-    font-size: 10%; /* Aumentado el tamaño de fuente */
-    text-shadow: 2% 2% 5% rgba(0, 0, 0, 0.3);
+    margin-bottom: 5%; /* Aproximadamente 20px, convertido a porcentaje */
+    font-size: 10vw; /* Usando viewport width para hacer el texto responsivo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     white-space: nowrap;
-    border-right: 1% solid #333;
+    border-right: 0.5vw solid #333; /* Aproximadamente 4px convertido a vw */
     width: 0;
     animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
@@ -41,6 +41,7 @@ h2 {
 }
 
 /* Header */
+
 header {
     position: fixed;
     top: 0;
@@ -48,25 +49,25 @@ header {
     width: 100%;
     background-color: #333;
     color: white;
-    padding: 5% 0;
+    padding: 5% 0; /* Convertido a porcentaje */
     z-index: 1000;
-    box-shadow: 0 1% 2% rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.2); /* Convertido a porcentaje */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
+    padding-left: 5%; /* Convertido a porcentaje */
+    padding-right: 5%; /* Convertido a porcentaje */
+    flex-wrap: wrap;
 }
 
 header img {
-    height: 8%; /* Ajuste proporcional al contenedor */
-    margin-right: 5%; /* Espacio entre logo y texto */
+    height: 10vh; /* Convertido a vh (viewport height) */
+    margin-right: 2%; /* Convertido a porcentaje */
 }
 
 header h1 {
     margin: 0;
-    font-size: 5%; /* Aumentado el tamaño de fuente */
+    font-size: 5vw; /* Aproximadamente 24px convertido a vw */
     display: inline-block;
     vertical-align: middle;
     color: white;
@@ -74,7 +75,7 @@ header h1 {
 
 header nav {
     display: flex;
-    justify-content: flex-end; /* Coloca los enlaces al final de la barra */
+    justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
     flex-wrap: wrap;
@@ -84,26 +85,26 @@ header nav a {
     color: white;
     text-decoration: none;
     margin-left: 5%; /* Convertido a porcentaje */
-    font-size: 3%; /* Aumentado el tamaño de fuente */
+    font-size: 4vw; /* Aproximadamente 16px convertido a vw */
     transition: color 0.3s ease;
 }
 
 header nav a:hover {
-    color: #FFB6B9; /* Cambia el color al pasar el ratón */
+    color: #FFB6B9;
 }
 
 /* Espaciado para el contenido debajo del header */
 main {
-    padding-top: 15%;
+    padding-top: 15vh; /* Aproximadamente 120px convertido a vh */
 }
 
 /* Sección de la Galería de Proyectos */
 .section-1 {
-    padding: 6%;
-    margin-bottom: 4%;
+    padding: 8%; /* Convertido a porcentaje */
+    margin-bottom: 5%; /* Convertido a porcentaje */
     border-radius: 1%;
-    box-shadow: 0 0 1% rgba(0, 0, 0, 0.1);
-    width: 100%;
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); /* Convertido a porcentaje */
+    width: 95%; /* Convertido a porcentaje */
     background-color: #A9D9D0;
     color: #fff;
     display: flex;
@@ -115,11 +116,11 @@ main {
 
 /* Sección de los Proyectos */
 .section-2 {
-    padding: 6%;
-    margin-bottom: 2%;
+    padding: 8%; /* Convertido a porcentaje */
+    margin-bottom: 4%; /* Convertido a porcentaje */
     border-radius: 1%;
-    box-shadow: 0 0 1% rgba(0, 0, 0, 0.1);
-    width: 100%;
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); /* Convertido a porcentaje */
+    width: 95%; /* Convertido a porcentaje */
     background-color: #F2E0D6;
     color: #fff;
     text-align: center;
@@ -133,27 +134,27 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 90%; /* Ajustado al 90% del contenedor */
-    padding: 2%; /* Convertido a porcentaje */
+    width: 95%; /* Convertido a porcentaje */
+    max-width: 80vw; /* Convertido a viewport width */
+    padding: 5%; /* Convertido a porcentaje */
     background-color: bisque;
-    border-radius: 1%; /* Ajuste proporcional */
-    box-shadow: 0 0 2% rgba(0, 0, 0, 0.1); /* Sombra proporcional */
-    margin-top: 2%;
+    border-radius: 1%;
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); /* Convertido a porcentaje */
+    margin-top: 5%; /* Convertido a porcentaje */
     margin-left: auto;
     margin-right: auto;
 }
 
 .button {
     display: inline-block;
-    padding: 4% 5%; /* Convertido a porcentaje */
+    padding: 5% 6%; /* Convertido a porcentaje */
     margin-top: 5%; /* Convertido a porcentaje */
     background-color: #FFE156;
     color: #0da399;
     text-decoration: none;
-    font-size: 4%; /* Convertido a porcentaje */
+    font-size: 6vw; /* Aproximadamente 30px convertido a vw */
     border-radius: 80px;
-    box-shadow: 0 4% 6% rgba(0, 0, 0, 0.1); /* Convertido a porcentaje */
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); /* Convertido a porcentaje */
     transition: background-color 0.3s ease, transform 0.5s ease;
 }
 
@@ -162,29 +163,29 @@ main {
 }
 
 .proyectos-lista {
-    font-size: 10%; /* Aumentado el tamaño de fuente */
+    font-size: 10vw; /* Aproximadamente 48px convertido a vw */
     color: #333333;
     font-weight: bold;
     text-shadow: 3% 3% 8% rgba(0, 0, 0, 0.3);
-    margin-top: 5%;
+    margin-top: 5%; /* Convertido a porcentaje */
 }
 
 .formulario-seccion {
     background-color: #ddab61;
-    padding: 6%; /* Convertido a porcentaje */
+    padding: 8%; /* Convertido a porcentaje */
     color: #333;
     border-radius: 1%;
-    box-shadow: 0 4% 20% rgba(0, 0, 0, 0.2); /* Convertido a porcentaje */
-    margin-top: 4%; /* Convertido a porcentaje */
-    width: 100%;
-    max-width: 90%; /* Ajustado al 90% del contenedor */
-    margin-bottom: 4%; /* Convertido a porcentaje */
+    box-shadow: 0 0.5% 2% rgba(0, 0, 0, 0.2); /* Convertido a porcentaje */
+    margin-top: 5%; /* Convertido a porcentaje */
+    width: 95%; /* Convertido a porcentaje */
+    max-width: 80vw; /* Convertido a viewport width */
+    margin-bottom: 5%; /* Convertido a porcentaje */
     text-align: left;
     font-family: sans-serif;
 }
 
 .formulario-seccion h3 {
-    font-size: 6%; /* Aumentado el tamaño de fuente */
+    font-size: 8vw; /* Aproximadamente 36px convertido a vw */
     color: #FF6347;
     margin-bottom: 5%; /* Convertido a porcentaje */
 }
@@ -195,25 +196,25 @@ main {
     padding: 4%; /* Convertido a porcentaje */
     margin-bottom: 4%; /* Convertido a porcentaje */
     border-radius: 1%;
-    border: 1% solid #ddd; /* Convertido a porcentaje */
-    font-size: 3%; /* Convertido a porcentaje */
+    border: 0.5% solid #ddd; /* Convertido a porcentaje */
+    font-size: 4vw; /* Aproximadamente 18px convertido a vw */
     background-color: #fff;
     color: #333;
     font-family: sans-serif;
 }
 
 .formulario-seccion textarea {
-    height: 20%; /* Convertido a porcentaje */
+    height: 20vh; /* Convertido a vh */
     resize: vertical;
 }
 
 .formulario-seccion button {
     background-color: #f97861;
     color: white;
-    font-size: 3%; /* Convertido a porcentaje */
+    font-size: 5vw; /* Aproximadamente 20px convertido a vw */
     padding: 4% 8%; /* Convertido a porcentaje */
     border: none;
-    border-radius: 10%; /* Border-radius convertido a porcentaje */
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
