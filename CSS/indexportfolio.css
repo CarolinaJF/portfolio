@@ -29,8 +29,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
     flex-wrap: wrap;
 }
 
@@ -41,7 +41,7 @@ header img {
 
 header h1 {
     margin: 0;
-    font-size: clamp(24px, 5vw, 40px); /* Ajuste dinámico para pantallas grandes */
+    font-size: 1rem;
     display: inline-block;
     vertical-align: middle;
     color: white;
@@ -59,7 +59,7 @@ header nav a {
     color: white;
     text-decoration: none;
     margin-left: 5%;
-    font-size: clamp(14px, 4vw, 20px); /* Ajuste dinámico */
+    font-size: clamp(1rem, 1.5rem, 2rem); /* Ajuste dinámico */
     transition: color 0.3s ease;
 }
 
@@ -69,14 +69,14 @@ header nav a:hover {
 
 /* Espaciado para el contenido debajo del header */
 main {
-    padding-top: 15vh; /* Aproximadamente 120px convertido a vh */
+    padding-top: 10vh; /* Aproximadamente 120px convertido a vh */
 }
 
 h2 {
     color: #FFB6B9;
     margin-bottom: 5%;
-    font-size: clamp(24px, 8vw, 60px); /* Ajuste dinámico entre 24px y 60px */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 4rem; /* Ajuste dinámico entre 24px y 60px */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.5vw solid #333; /* Aproximadamente 4px convertido a vw */
@@ -236,54 +236,3 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 10vw;
-    }
-
-    .button {
-        font-size: 8vw; 
-    }
-
-    .formulario-seccion input,
-    .formulario-seccion textarea {
-        font-size: 5vw;
-    }
-
-    .proyectos-lista {
-        font-size: 8vw;
-    }
-}
-
-/* Para pantallas grandes (pantallas de 20" y más grandes) */
-@media (min-width: 1200px) {
-    h2 {
-        font-size: 60px; /* Tamaño máximo de fuente */
-    }
-
-    header h1 {
-        font-size: 40px; /* Tamaño máximo de fuente */
-    }
-
-    .button {
-        font-size: 25px; /* Tamaño máximo de fuente */
-    }
-
-    .proyectos-lista {
-        font-size: 40px; /* Ajuste más moderado */
-    }
-
-    .formulario-seccion h3 {
-        font-size: 30px;
-    }
-
-    .formulario-seccion input,
-    .formulario-seccion textarea {
-        font-size: 18px; /* Ajuste para pantallas grandes */
-    }
-
-    .formulario-seccion button {
-        font-size: 20px; /* Ajuste para pantallas grandes */
-    }
-}
