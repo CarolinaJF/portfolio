@@ -1,4 +1,12 @@
 /* indexportfolio.css */
+
+/* Aplica box-sizing a todos los elementos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
     padding: 0;
@@ -10,12 +18,12 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    overflow-x: hidden; /* Evita desbordamientos horizontales  */
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
 h2 {
     color: #FFB6B9;
-    margin-bottom: 2%; /* 20px => 2% aprox. */
+    margin-bottom: 2%; /* 20px => 2% */
     font-size: 6vw; /* Cambiado a relativo a la pantalla */
     text-shadow: 0.2vw 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -184,12 +192,7 @@ main {
     font-family: sans-serif;
 }
 
-.formulario-seccion h3 {
-    font-size: 4.5vw; /* 36px => 4.5% */
-    color: #FF6347;
-    margin-bottom: 3%; /* 30px => 3% */
-}
-
+/* Ajuste a los inputs y textarea */
 .formulario-seccion input,
 .formulario-seccion textarea {
     width: 100%;
@@ -201,6 +204,7 @@ main {
     background-color: #fff;
     color: #333;
     font-family: sans-serif;
+    box-sizing: border-box; /* Asegura que el padding y border estén incluidos dentro del tamaño total */
 }
 
 .formulario-seccion textarea {
