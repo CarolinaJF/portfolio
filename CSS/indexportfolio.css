@@ -16,7 +16,7 @@ body {
 h2 {
     color: #FFB6B9;
     margin-bottom: 5%;
-    font-size: 6%;
+    font-size: 15%; /* Aumentado el tamaño de fuente */
     text-shadow: 2% 2% 5% rgba(0, 0, 0, 0.3);
     overflow: hidden;
     white-space: nowrap;
@@ -41,7 +41,6 @@ h2 {
 }
 
 /* Header */
-
 header {
     position: fixed;
     top: 0;
@@ -62,12 +61,12 @@ header {
 
 header img {
     height: 8%; /* Ajuste proporcional al contenedor */
-    margin-right: 5%; /* Espacio entre logo y texto */
+    margin-right: 2%; /* Espacio entre logo y texto */
 }
 
 header h1 {
     margin: 0;
-    font-size: 3%;
+    font-size: 5%; /* Aumentado el tamaño de fuente */
     display: inline-block;
     vertical-align: middle;
     color: white;
@@ -85,7 +84,7 @@ header nav a {
     color: white;
     text-decoration: none;
     margin-left: 5%; /* Convertido a porcentaje */
-    font-size: 2%;
+    font-size: 3%; /* Aumentado el tamaño de fuente */
     transition: color 0.3s ease;
 }
 
@@ -163,7 +162,7 @@ main {
 }
 
 .proyectos-lista {
-    font-size: 6%; /* Ajuste proporcional */
+    font-size: 10%; /* Aumentado el tamaño de fuente */
     color: #333333;
     font-weight: bold;
     text-shadow: 3% 3% 8% rgba(0, 0, 0, 0.3);
@@ -185,7 +184,7 @@ main {
 }
 
 .formulario-seccion h3 {
-    font-size: 5%; /* Convertido a porcentaje */
+    font-size: 6%; /* Aumentado el tamaño de fuente */
     color: #FF6347;
     margin-bottom: 5%; /* Convertido a porcentaje */
 }
