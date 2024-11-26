@@ -104,7 +104,7 @@ main {
     margin-bottom: 4%;
     border-radius: 1%;
     box-shadow: 0 0 1% rgba(0, 0, 0, 0.1);
-    width: 99%;
+    width: 100%;
     background-color: #A9D9D0;
     color: #fff;
     display: flex;
@@ -120,7 +120,7 @@ main {
     margin-bottom: 2%;
     border-radius: 1%;
     box-shadow: 0 0 1% rgba(0, 0, 0, 0.1);
-    width: 99%;
+    width: 100%;
     background-color: #F2E0D6;
     color: #fff;
     text-align: center;
@@ -134,7 +134,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 99%;
+    width: 100%;
     max-width: 90%; /* Ajustado al 90% del contenedor */
     padding: 2%; /* Convertido a porcentaje */
     background-color: bisque;
