@@ -2,67 +2,80 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale+1.0">
-        <title>Listado</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio</title>
         <!-- Enlace CSS -->
         <link rel="stylesheet" href="../CSS/listado.css">
     </head>
     <body>
         <header>
-            <img src="../Imagenes/logo.png" alt="Logo">
-            <h1>Carolina Jiménez</h1>
-            <nav>
-                <a href="./indexportfolio.html" target="_blank">Home</a>
-                <a href="./listado.html" target="_blank">Galería</a>
-                <a href="./pagina1.html" target="_blank">Proyecto 1</a>
-                <a href="./pagina2.html" target="_blank">Proyecto 2</a>
-            </nav>
+            <div class="logo-container">
+                <img src="../Imagenes/logo.png" alt="Logo">
+                <h1>Carolina Jiménez</h1>
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="./indexportfolio.html" target="_blank">Inicio</a>
+                    <a href="./listado.html" target="_blank">Listado</a>
+                    <a href="./pagina1.html" target="_blank">Proyecto 1</a>
+                    <a href="./pagina2.html" target="_blank">Proyecto 2</a>
+                </div>
+            </div>
+            <label class="switch"></label>
+            <input type="checkbox" id="toggle-theme">
+            <span class="slider"></span>
         </header> 
         <main>
-        <div class="container">
-            <!-- Sección Galería de Proyectos -->
-            <section class="section-1">
-                <h2 id="galeria-titulo">Galería de Proyectos</h2>
-            </section>
-            
-            <section class="section-2">
-                <p class="proyectos-lista">Proyecto 1</p>
-                <div class="button-container">
-                    <a href="pagina1.html" class="button" id="button1">GitHub</a>
-                </div>
-                <p class="proyectos-lista">Proyecto 2</p>
-                <div class="button-container">
-                    <a href="pagina2.html" class="button" id="button2">Gestor de Incidencias</a>
-                </div>
-            </section>
+            <!-- Contenido principal -->
+            <div class="container">
+                <!-- Sección Galería de Proyectos -->
+                <section class="section-1">
+                    <h2 id="galeria-titulo">Galería de Proyectos</h2>
+                </section>
+                
+                <section class="section-2">
+                    <p class="proyectos-lista">Proyecto 1</p>
+                    <div class="button-container">
+                        <a href="pagina1.html" class="button" id="button1">GitHub</a>
+                    </div>
+                    <p class="proyectos-lista">Proyecto 2</p>
+                    <div class="button-container">
+                        <a href="pagina2.html" class="button" id="button2">Gestor de Incidencias</a>
+                    </div>
+                </section>
 
-            <!-- sección formulario -->
-            <section class="formulario-seccion">
-                <h3>Contáctame</h3>
-                <form action="#" method="POST">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required placeholder="Introduce tu correo electrónico">
+                <!-- Sección formulario -->
+                <section class="formulario-seccion">
+                    <h3>Contáctame</h3>
+                    <form action="#" method="POST">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required placeholder="Introduce tu correo electrónico">
 
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre">
 
-                    <label for="apellidos">Apellidos:</label>
-                    <input type="text" id="apellidos" name="apellidos" required placeholder="Introduce tus apellidos">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" required placeholder="Introduce tus apellidos">
 
-                    <label for="mensaje">Cuerpo del mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                        <label for="mensaje">Cuerpo del mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí"></textarea>
 
-                    <button type="submit">Enviar</button>
-                </form>
-            </section>
-        </div>
-            </main>
-             <footer>
-                <p>Todos los derechos reservados. 2024</p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/carolina-jimenez-362577b3/" target="_blank">LinkedIn</a></p>
-             </footer>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>Todos los derechos reservados. 2024</p>
+            <a href="https://www.linkedin.com/in/carolina-jimenez-362577b3/" target="_blank">LinkedIn</a>
+        </footer>
 
-        <!-- enlace archivo JS a final del body -->
-        <script src="scripts.js"></script>
+        <!-- Enlace archivo JS a final del body -->
+        <script src="../listado.js"></script>
     </body>
 </html>
