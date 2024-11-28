@@ -3,32 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio</title>
+        <title>Galería de Proyectos</title>
         <!-- Enlace CSS -->
         <link rel="stylesheet" href="../CSS/listado.css">
     </head>
     <body>
         <header>
-            <div class="logo-container">
-                <img src="../Imagenes/logo.png" alt="Logo">
-                <h1>Carolina Jiménez</h1>
-            </div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div class="dropdown-content" id="dropdownContent">
-                    <a href="./indexportfolio.html" target="_blank">Inicio</a>
-                    <a href="./listado.html" target="_blank">Listado</a>
-                    <a href="./pagina1.html" target="_blank">Proyecto 1</a>
-                    <a href="./pagina2.html" target="_blank">Proyecto 2</a>
-                </div>
-            </div>
-            <label class="switch"></label>
-            <input type="checkbox" id="toggle-theme">
-            <span class="slider"></span>
+            <img src="../Imagenes/Logo.png">
+            <h1>Carolina Jiménez</h1>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <div class="hamburger-icon">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="./indexportfolio.html" target="_blank">Inicio</a>
+                            <a href="./listado.html" target="_blank">Galería</a>
+                            <a href="./pagina1.html" target="_blank">Página 1</a>
+                            <a href="./pagina2.html" target="_blank">Página 2</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </header> 
         <main>
             <!-- Contenido principal -->
@@ -74,8 +73,6 @@
             <p>Todos los derechos reservados. 2024</p>
             <a href="https://www.linkedin.com/in/carolina-jimenez-362577b3/" target="_blank">LinkedIn</a>
         </footer>
-
-        <!-- Enlace archivo JS a final del body -->
         <script src="../listado.js"></script>
     </body>
 </html>
