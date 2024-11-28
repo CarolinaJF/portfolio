@@ -37,7 +37,7 @@ header {
 h2 {
     color: #FFB6B9;
     margin-bottom: 20px;
-    font-size: clamp(20px, 8vw, 40px); /* Ajuste dinámico entre 24px y 60px */
+    font-size: clamp(3vw, 4vw, 7.5vw); /* Ajuste dinámico entre 24px y 60px */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     white-space: nowrap;
@@ -179,7 +179,7 @@ main {
 
 /* Lista de proyectos */
 .proyectos-lista {
-    font-size: clamp(4vw, 4vw, 7.5vw); /* Ajuste dinámico */
+    font-size: clamp(3vw, 4vw, 6vw); /* Ajuste dinámico */
     color: #333333;
     font-weight: bold;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
@@ -290,7 +290,7 @@ footer a:hover {
     }
 
     .proyectos-lista {
-        font-size: 8vw;
+        font-size: 6vw;
     }
 
     .section-1, .section-2 {
