@@ -1,5 +1,3 @@
-// scripts.js
-
 // Función para realizar el efecto de tipeo (deletreo)
 function typingEffect(elementId, text, speed) {
     let i = 0;
@@ -15,12 +13,6 @@ function typingEffect(elementId, text, speed) {
 
     type(); // Inicia el tipo de efecto
 }
-// Función para activar/desactivar el menú hamburguesa
-function toggleMenu() {
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    hamburgerMenu.classList.toggle('active'); // Alterna la clase 'active' para mostrar u ocultar el menú
-}
-
 // Llamar a la función typingEffect para el título "Galería de Proyectos"
 window.onload = function() {
     typingEffect("galeria-titulo", "Galería de Proyectos", 100);
