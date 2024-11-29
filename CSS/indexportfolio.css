@@ -1,11 +1,9 @@
-/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo Base */
 body {
     display: flex;
     flex-direction: column;
@@ -15,7 +13,6 @@ body {
     line-height: 1.6;
 }
 
-/*Poner la pagina en modo oscuro*/
 body.dark-mode {
     background-color: #333;
     color: white;
@@ -146,7 +143,6 @@ input:checked + .slider::before {
     transform: translateX(26px);
 }
 
-/*Estilo del header*/
 header {
     display: flex;
     flex-wrap: wrap;
@@ -174,10 +170,10 @@ header h1 {
     padding-left: 50px;
 }
 
-/*Estilo del Nav*/
 nav {
     padding: 10px 20px;
-    justify-content: center;
+    text-decoration: none;
+    color: white;
 }
 
 nav a {
@@ -199,12 +195,14 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 /* Estilo de cada ítem del menú */
 nav ul li {
     position: relative;
     padding: 10px;
+    margin-left: 0;
 }
 
 /* Estilo para el icono de las tres líneas (hamburger) */
@@ -229,32 +227,39 @@ nav ul li {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f5765e;
-    min-width: 160px;
+    top: 100%;
+    left: 0;
+    transform: translateX(0); /* Moverlo ligeramente hacia la izquierda si es necesario */
+    background-color: #8e8686;
+    min-width: 100px;
+    max-width: 200px;
     z-index: 1;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 /* Estilo de los enlaces dentro del desplegable */
 .dropdown-content a {
     color: white;
-    padding: 12px 16px;
+    padding: 8px 12px;
     text-decoration: none;
     display: block;
+    font-size: 1rem; 
 }
 
 .dropdown-content a:hover {
     background-color: white;
+    color: #333;
 }
 
-/* Mostrar el desplegable cuando se activa el menú */
-.dropdown.open .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
 /* Cambiar el color de fondo cuando el menú hamburguesa está abierto */
-.dropdown.open .hamburger-icon .line {
+.dropdown:hover .hamburger-icon .line {
     background-color: #ccc; /* Cambiar color de las líneas */
 }
 
@@ -262,7 +267,6 @@ nav ul li {
 .hamburger-icon:hover .line {
     background-color: #ccc;
 }
-
 
 /*Estilo del main*/
 main {
